@@ -7,7 +7,6 @@ import { MdClose } from 'react-icons/md'
 import cashoutSound from '../../../assets/mines/audio/cashout.mp3';
 import clickSound from '../../../assets/mines/audio/clickSound.mp3';
 
-
 function MinesGame({ assets }) {
     //history widget
     const [showHistory, setShowHistory] = useState(false)
@@ -168,7 +167,6 @@ function MinesGame({ assets }) {
         audio.play().catch(error => {
             console.log('Autoplay prevented:', error);
           });
-
     }
 
    

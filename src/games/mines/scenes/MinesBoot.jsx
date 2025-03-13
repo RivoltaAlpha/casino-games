@@ -21,9 +21,10 @@ function MinesBoot({ assets, onContinue }) {
         onContinue();
       }, 4000); // 4000 milliseconds = 4 seconds
     };
-  //console.log('Assets passed', assets)
 
-  const slides = [assets.slider1.src, assets.slider2.src]
+//console.log('Assets passed', assets)
+
+const slides = [assets.slider1.src, assets.slider2.src]
 
   return (
     <div className='w-full h-full flex relative rounded-lg flex-col gap-3 py-2 px-6 items-center justify-center' >
@@ -105,7 +106,6 @@ function MinesBoot({ assets, onContinue }) {
               backgroundPosition: 'center'
             }}
             onClick={handleContinueClick}
-
           >
             {/* <img src={assets.continue.src} onClick={onContinue} alt="Continue"
             className="cursor-pointer mb-3" /> */}
@@ -117,4 +117,4 @@ function MinesBoot({ assets, onContinue }) {
   )
 }
 
-export default MinesBoot
+export default MinesBoot;

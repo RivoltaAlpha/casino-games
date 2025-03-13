@@ -18,6 +18,7 @@ import goldChest from '../../assets/mines/images/goldChest.webp';
 import blueChest from '../../assets/mines/images/blueChest.webp';
 import refresh from '../../assets/mines/images/refresh.webp'
 import bootMusic from '../../assets/Alibaba/audio/alibaba.mp3';
+import { useLocation } from 'react-router-dom'
 
 
 const Mines = () => {
