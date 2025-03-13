@@ -89,6 +89,20 @@ const Landing = () => {
                         Play Now
                     </Link>
                 </div>
+                <div className="bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-2xl transition-shadow">
+                    
+                    ⭐
+                    <h2 className="text-3xl font-bold mb-2">Crazy 777</h2>
+                    <p className="text-gray-400 mb-4">
+                        Test your luck and uncover treasures while spinning the wheels. Can you handle the pressure?
+                    </p>
+                    <Link
+                        to="/crazy"
+                        className="block w-full text-center bg-blue-600 py-2 rounded-md hover:bg-blue-700 transition-colors"
+                    >
+                        Play Now
+                    </Link>
+                </div>
 
 
                 
