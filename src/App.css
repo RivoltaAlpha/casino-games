@@ -1,0 +1,345 @@
+/* #root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+} */
+
+:root {
+  --item-height: 60px;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+
+#mines {
+
+  background-image: url("./assets/mines/images/blueBg.webp");
+  background-size: cover;
+}
+
+#tongits {
+
+  background-image: url("./assets/tongits/images/bg.webp");
+  background-size: cover;
+}
+
+
+.tongits {
+
+  background-image: url("./assets/tongits/images/bg.webp");
+  background-size: cover;
+}
+
+
+.App {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.slots {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.slot-row {
+  display: flex;
+}
+
+.slot {
+  font-size: 50px;
+  margin: 0 10px;
+  padding: 20px;
+  border: 2px solid #000;
+  border-radius: 10px;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f0f0f0;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 5px;
+}
+
+/* anim  */
+
+@keyframes scaleUpDown {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.gif {
+  animation: scaleUpDown 1s ease-in-out infinite;
+}
+
+
+
+/* alibaba */
+
+@keyframes slide-up {
+  from {
+    transform: translateY(100%);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+
+.animate-slide-up {
+  animation: slide-up 6s ease-in-out forwards;
+}
+
+
+
+
+/*carousel */
+.carousel-container {
+  width: 100%;
+  height: 300px;
+  /* Set your desired height */
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel-inner {
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+  width: 100%;
+  height: 100%;
+  flex: 0 0 100%;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+
+
+@keyframes spin {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+
+
+
+/*
+ * Spinning animation
+ */
+
+
+
+.col {
+  padding: 0 10px;
+  will-change: true;
+  /* transform: translateY(calc(-100% + 100 * 3)); */
+  transform: translateY(calc(-100% + 94px * 3));
+}
+
+
+.col img {
+
+  width: 80px;
+  height: 45px;
+  margin: 10px 0;
+  position: relative;
+  z-index: 3;
+}
+
+.upper.col {
+  transform: translateY(0px);
+}
+
+.upper.col img{
+  width: 70px;
+  height: 50px;
+
+}
+
+.buffalo .col {
+  padding: 0 10px;
+  will-change: true;
+  transform: translateY(calc(-100% + 130px * 3));
+}
+
+.buffalo .col img {
+  height: 90px;
+  margin: 10px 0;
+  position: relative;
+  z-index: 3;
+}
+
+/* for buffalo */
+/*
+.buffalo .col{
+  padding: 0 10px;
+  will-change: true;
+  transform: translateY(calc(-100% + 130px * 3));
+}
+
+.buffalo .col img {
+  height: 90px;
+  margin: 10px 0;
+  position: relative;
+  z-index: 3;
+}
+
+ #container.spinning .outer-col:nth-of-type(2) .col {
+  animation-delay: 0.01s;
+}
+
+#container.spinning .outer-col:nth-of-type(3) .col {
+  animation-delay: 0.02s;
+}
+
+#container.spinning .outer-col:nth-of-type(4) .col {
+  animation-delay: 0.03s;
+}
+
+#container.spinning .col {
+  animation-name: scroll;
+  animation-iteration-count: 1;
+  animation-timing-function: cubic-bezier(.65, .97, .72, 1);
+}
+
+@keyframes scroll {
+  to {
+      transform: translateY(0);
+  }
+}
+
+*/
+
+
+
+
+/* new spin */
+
+@keyframes continuous-spin {
+  from {
+    transform: translateY(-80%);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+
+#container.spinning .col {
+  /* Use continuous animation while waiting for results */
+  animation: continuous-spin 0.5s linear infinite;
+}
+
+
+
+@keyframes horizontal-spin {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+#container-one.spinning-horizontal .col {
+  animation: horizontal-spin 0.5s linear infinite;
+}
+
+
+
+/* deceleration */
+@keyframes decelerate {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(calc(-100% + 130px * 3));
+    /* adjust so final icons align */
+  }
+}
+
+/* Apply when you want the reels to decelerate */
+.container.spinning .col.decelerate {
+  animation-name: decelerate;
+  animation-duration: 1.5s;
+  /* adjust as needed */
+  animation-timing-function: cubic-bezier(.65, .97, .72, 1);
+  animation-iteration-count: 1;
+}
+
+
+

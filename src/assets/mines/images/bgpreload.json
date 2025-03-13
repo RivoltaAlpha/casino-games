@@ -1,0 +1,82 @@
+{
+	"textures": [
+		{
+			"image": "bgpreload.png",
+			"format": "RGBA8888",
+			"size": {
+				"w": 1935,
+				"h": 1134
+			},
+			"scale": "1",
+			"frames": [
+				{
+					"filename": "preload1.png",
+					"frame": {
+						"x": 1,
+						"y": 1,
+						"w": 638,
+						"h": 1132
+					},
+					"rotated": false,
+					"trimmed": false,
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 638,
+						"h": 1132
+					},
+					"sourceSize": {
+						"w": 638,
+						"h": 1132
+					}
+				},
+				{
+					"filename": "preload2.png",
+					"frame": {
+						"x": 641,
+						"y": 1,
+						"w": 655,
+						"h": 1130
+					},
+					"rotated": false,
+					"trimmed": false,
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 655,
+						"h": 1130
+					},
+					"sourceSize": {
+						"w": 655,
+						"h": 1130
+					}
+				},
+				{
+					"filename": "preload3.png",
+					"frame": {
+						"x": 1298,
+						"y": 1,
+						"w": 636,
+						"h": 1130
+					},
+					"rotated": false,
+					"trimmed": false,
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 636,
+						"h": 1130
+					},
+					"sourceSize": {
+						"w": 636,
+						"h": 1130
+					}
+				}
+			]
+		}
+	],
+	"meta": {
+		"app": "http://www.codeandweb.com/texturepacker",
+		"version": "1.0"
+	}
+}
