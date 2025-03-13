@@ -16,7 +16,7 @@ import Scatter from '../../../assets/tongits/images/scatter.webp';
 // import s from '../../../assets/Alibaba'
 
 //audio
-import bootMusic from '../../../assets/tongits/audio/mcBoot.mp3';
+import continueSound from '../../../assets/Alibaba/audio/load.mp3';
 
 import Carousel from '../Components/carousel';
 
@@ -25,37 +25,23 @@ function AlibabaBoot({ onContinue }) {
   const slides = [Slider1, Slider2]
   const slideGif = [times1000, Scatter]
 
-
-  // useEffect(() => {
-  //   const audio = new Audio(bootMusic);
-  //   audio.loop = true;
-
-  //   const handlePlayAudio = () => {
-  //     audio.play().catch(error => {
-  //       console.log('Autoplay prevented:', error);
-  //     });
-  //   };
-
-  //   document.addEventListener('click', handlePlayAudio, { once: true });
-
-  //   const handleVisibilityChange = () => {
-  //     if (document.hidden) {
-  //       audio.pause();
-  //     } else {
-  //       audio.play();
-  //     }
-  //   };
-
-  //   document.addEventListener('visibilitychange', handleVisibilityChange);
-
-  //   return () => {
-  //     audio.pause();
-  //     audio.currentTime = 0;
-  //     document.removeEventListener('click', handlePlayAudio);
-
-  //   };
-  // }, []);
-
+  // play audio when the continue button is clicked
+  const playContinueSound = () => {
+    const audio = new Audio(continueSound);
+    audio.play().catch(error => {
+      console.log('Autoplay prevented:', error);
+    });
+  };
+  
+  // Combined handler to play sound and then continue after delay
+  const handleContinueClick = () => {
+    playContinueSound();
+    
+    // Delay the onContinue call by 4 seconds
+    setTimeout(() => {
+      onContinue();
+    }, 4000); // 4000 milliseconds = 4 seconds
+  };
 
   return (
     <div className="w-full bg-cover bg-center h-full relative rounded-lg flex flex-col p-4 items-center justify-center"
@@ -89,7 +75,7 @@ function AlibabaBoot({ onContinue }) {
         </div>
       </div>
       <div>
-        <img src={Continue} onClick={onContinue} alt="Continue" className="cursor-pointer mb-3" />
+        <img src={Continue} onClick={handleContinueClick} alt="Continue" className="cursor-pointer mb-3" />
       </div>
 
     </div>
