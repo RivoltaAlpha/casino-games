@@ -13,7 +13,7 @@ import mute from '../../../assets/common/images/mute.webp';
 import playCoil from '../../../assets/common/images/buttonCoil.webp';
 
 //audio
-import bootMusic from '../../../assets/tongits/audio/mcBoot.mp3';
+import spinningSound from '../../../assets/Alibaba/audio/spinning.mp3';
 
 const BASE_SPINNING_DURATION = 2.7;
 const COLUMN_SPINNING_DURATION = 0.3;
@@ -177,6 +177,10 @@ function AlibabaGame() {
   const spin = async (e) => {
     e.target.disabled = true;
     //setBalanace(balance-betAmount)
+
+    // play spinning audio sound
+    const spinningAudio = new Audio(spinningSound);
+    spinningAudio.play().catch(err => console.log('Audio play interrupted: ', err));
 
     // Start vertical and horizontal spinning animations
     containerRef.current.classList.add('spinning');

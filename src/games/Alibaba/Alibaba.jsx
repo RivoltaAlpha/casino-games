@@ -2,6 +2,8 @@ import React, { useState,useEffect } from 'react'
 import AlibabaBoot from './scenes/boot';
 import AlibabaGame from './scenes/game';
 import bootMusic from '../../assets/Alibaba/audio/alibaba.mp3';
+
+
 function Alibaba() {
   const [currentView, setCurrentView] = useState('boot')
     useEffect(() => {
