@@ -6,6 +6,7 @@ import ChargeBuffalo from './games/chargeBuffalo/ChargeBuffalo';
 import Alibaba from './games/Alibaba/Alibaba';
 
 import BoxingKIng from './games/boxingKIng/boxingKing';
+import Crazy777 from './games/crazy777/Crazy';
 
 //import './App.css'
 function App() {
@@ -14,16 +15,14 @@ function App() {
       <Routes>
         {/* Define the page routes */}
         <Route path="/" element={<Landing/>} />
-
-        {/* <Route path="/crazy" element={<Crazy77/>} />
+        {/* 
         <Route path="/mines" element={<Mines/>} />
         <Route path="/mega" element={<Mega/>} />
         <Route path="/supa" element={<Supa/>} />
-
         <Route path="/mc" element={<MoneyComing/>} />
         <Route path="/ge" element={<MoneyComing/>} />
-
         <Route path="/demo" element={<Demo/>} />*/}
+        <Route path="/crazy" element={<Crazy777/>} />
         <Route path="/boxing-king" element={<BoxingKIng/>} />
         <Route path="/alibaba" element={<Alibaba/>} /> 
         <Route path="/mines" element={<Mines/>} /> 
