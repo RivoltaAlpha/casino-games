@@ -6,6 +6,7 @@ import { FaInbox } from 'react-icons/fa6'
 import { MdClose } from 'react-icons/md'
 import cashoutSound from '../../../assets/mines/audio/cashout.mp3';
 import clickSound from '../../../assets/mines/audio/clickSound.mp3';
+import startSound from '../../../assets/mines/audio/StartGame.mp3';
 
 function MinesGame({ assets }) {
     //history widget
@@ -29,7 +30,12 @@ function MinesGame({ assets }) {
             current.scrollBy({ left: direction === "next" ? scrollAmount : -scrollAmount, behavior: "smooth" });
         }
     };
-
+    const playStartSound = () => {
+        const audio = new Audio(startSound);
+        audio.play().catch(error => {
+            console.log('Autoplay prevented:', error);
+        });
+    };
 
     //setting bet amount
     const [showBetPopup, setShowBetPopup] = useState(false)
@@ -42,6 +48,7 @@ function MinesGame({ assets }) {
     };
     const handleBetButtonClick = () => {
         setShowBetPopup(true);
+        playStartSound();
     };
 
     //setting mines count
@@ -453,9 +460,10 @@ const shuffleArray = (array) => {
                             {!gameStarted &&(
                                 <div className='cursor-pointer' onClick={() => {
                                     setGameStarted(true);
-                                    gameEnded(false)
+                                    setGameEnded(false)
                                     setBalance(balance-betAmount);
                                     setRevealed(Array(25).fill(null)); // Reset revealed state
+                                    playStartSound();
                                 }}>
                                     <p className='text-xs font-semibold' >Start Game</p>
                                 </div>
@@ -467,6 +475,7 @@ const shuffleArray = (array) => {
                                     setGameEnded(false)
                                     setBalance(balance-betAmount);
                                     setRevealed(Array(25).fill(null)); // Reset revealed state
+                                    playStartSound();
                                 }}>
                                     <p className='text-xs font-semibold'>Restart</p>
                                 </div> 
