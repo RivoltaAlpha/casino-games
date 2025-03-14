@@ -140,7 +140,7 @@ const Landing = () => {
                         Test your luck and uncover treasures while spinning the wheels. Can you handle the pressure?
                     </p>
                     <Link
-                        to="/https://fortune-gems.vercel.app/"
+                        to="https://fortune-games-2.vercel.app/"
                         className="block w-full text-center bg-blue-600 py-2 rounded-md hover:bg-blue-700 transition-colors"
                     >
                         Play Now
