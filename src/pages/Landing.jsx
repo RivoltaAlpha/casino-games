@@ -133,22 +133,21 @@ const Landing = () => {
                         Play Now
                     </a>
                 </div>
-                <div className="bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-2xl transition-shadow">                   
+                <div className="bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-2xl transition-shadow">
                     ⭐
                     <h2 className="text-3xl font-bold mb-2">Fortune Gems 2</h2>
                     <p className="text-gray-400 mb-4">
                         Test your luck and uncover treasures while spinning the wheels. Can you handle the pressure?
                     </p>
-                    <Link
-                        to="https://fortune-games-2.vercel.app/"
+                    <a
+                        href="https://fortune-games-2.vercel.app/"
                         className="block w-full text-center bg-blue-600 py-2 rounded-md hover:bg-blue-700 transition-colors"
+                        target="_blank"
+                        rel="noopener noreferrer"
                     >
                         Play Now
-                    </Link>
-                </div>
-
-
-                
+                    </a>
+                </div>                
             </section>
 
             {/* Footer */}
