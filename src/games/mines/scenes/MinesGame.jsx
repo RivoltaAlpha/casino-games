@@ -1,11 +1,9 @@
 import React, { useState, useRef } from 'react'
 import { BiCaretDown, BiCaretLeft, BiCaretRight, BiPlay } from 'react-icons/bi'
-import { BsInbox, BsPlayBtn } from 'react-icons/bs'
-import { FaChevronLeft, FaChevronRight } from 'react-icons/fa'
-import { FaInbox } from 'react-icons/fa6'
 import { MdClose } from 'react-icons/md'
 import cashoutSound from '../../../assets/mines/audio/cashout.mp3';
-import clickSound from '../../../assets/mines/audio/clickSound.mp3';
+import clickSound from '../../../assets/mines/audio/coin.mp3';
+import mineSound from '../../../assets/mines/audio/mine.mp3';
 import startSound from '../../../assets/mines/audio/StartGame.mp3';
 
 function MinesGame({ assets }) {
@@ -111,11 +109,24 @@ function MinesGame({ assets }) {
                 setGameEnded(true);
                 //setGameStarted(false);
             }
-            // play click sound
-            const audio = new Audio(clickSound);
-            audio.play().catch(error => {
-                console.log('Autoplay prevented:', error);
+            // // play click sound
+            // const audio = new Audio(clickSound);
+            // audio.play().catch(error => {
+            //     console.log('Autoplay prevented:', error);
+            //     });
+
+            //play different sound based on outcome
+            if (response.outcome === 1) {
+                const audio = new Audio(clickSound);
+                audio.play().catch(error => {
+                    console.log('Autoplay prevented:', error);
                 });
+            } else {
+                const audio = new Audio(mineSound);
+                audio.play().catch(error => {
+                    console.log('Autoplay prevented:', error);
+                });
+            }
 
         } catch (error) {
             console.error("Server error:", error);
