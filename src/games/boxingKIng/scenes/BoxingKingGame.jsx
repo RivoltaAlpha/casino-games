@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react'
+import boxer from "../../../assets/boxingKing/images/man.png"
 
 const BASE_SPINNING_DURATION = 2.7;
 const COLUMN_SPINNING_DURATION = 0.3;
@@ -366,6 +367,19 @@ function BoxingKIngGame({ assets }) {
 
 
     return (
+        <div className='w-full h-full flex relative rounded-lg flex-col gap-3'>
+        <div className='w-full flex justify-center items-center mb-4'>
+            <div className='w-64 h-64 relative mx-auto'
+                style={{
+                    backgroundImage: `url(${boxer})`,
+                    backgroundSize: 'contain',
+                    backgroundRepeat: 'no-repeat',
+                    backgroundPosition: 'center'
+                }}
+            ></div>
+        </div>
+
+
         <div className='w-full h-full flex relative rounded-lg flex-col gap-3 
          px-6 items-center justify-center '
             style={{
@@ -582,6 +596,7 @@ function BoxingKIngGame({ assets }) {
             </div>
 
         </div>
+         </div>
     )
 }
 
