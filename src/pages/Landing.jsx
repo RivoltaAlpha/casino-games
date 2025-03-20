@@ -89,7 +89,7 @@ const Landing = () => {
                         Play Now
                     </Link>
                 </div>
-                <div className="bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-2xl transition-shadow">
+                {/* <div className="bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-2xl transition-shadow">
                     
                     ⭐
                     <h2 className="text-3xl font-bold mb-2">Crazy 777</h2>
@@ -102,7 +102,7 @@ const Landing = () => {
                     >
                         Play Now
                     </Link>
-                </div>
+                </div> */}
                 <div className="bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-2xl transition-shadow">
                     ⭐
                     <h2 className="text-3xl font-bold mb-2">Mega Ace</h2>
