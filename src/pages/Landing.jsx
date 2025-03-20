@@ -170,7 +170,7 @@ const Landing = () => {
                         Test your luck and uncover treasures while spinning the wheels. Can you handle the pressure?
                     </p>
                     <a
-                        href="https://golden-empire-frontend.vercel.app/"
+                        href="https://wild-ace.vercel.app/"
                         className="block w-full text-center bg-blue-600 py-2 rounded-md hover:bg-blue-700 transition-colors"
                         target="_blank"
                         rel="noopener noreferrer"
@@ -180,12 +180,12 @@ const Landing = () => {
                 </div>                
                 <div className="bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-2xl transition-shadow">
                     ⭐
-                    {/* <h2 className="text-3xl font-bold mb-2">Super Ace</h2> */}
+                    <h2 className="text-3xl font-bold mb-2">Super Ace</h2>
                     <p className="text-gray-400 mb-4">
                         Test your luck and uncover treasures while spinning the wheels. Can you handle the pressure?
                     </p>
                     <a
-                        href="https://golden-empire-frontend.vercel.app/"
+                        href="https://super-ace-game.vercel.app/"
                         className="block w-full text-center bg-blue-600 py-2 rounded-md hover:bg-blue-700 transition-colors"
                         target="_blank"
                         rel="noopener noreferrer"
