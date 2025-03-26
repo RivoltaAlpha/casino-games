@@ -1,4 +1,5 @@
 import React, { useState, useRef,useEffect } from 'react'
+import buffalo from '../../../assets/chargeBuffalo/images/buffaloImage.webp'
 
 const BASE_SPINNING_DURATION = 2.7;
 const COLUMN_SPINNING_DURATION = 0.3;
@@ -455,6 +456,16 @@ function calculateOutcome(reels, betAmount, paytable) {
         >
             {/*wide screen ie  laptop */}
             <div className=' flex w-full h-full flex-col items-center justify-center'>
+                <div className='w-full flex justify-center items-center mb-4'>
+                    <div className='w-64 h-64 relative mx-auto'
+                        style={{
+                            backgroundImage: `url(${buffalo})`,
+                            backgroundSize: 'contain',
+                            backgroundRepeat: 'no-repeat',
+                            backgroundPosition: 'center'
+                        }}
+                    ></div>
+                </div>
                 <div className='relative flex items-center justify-center md:w-[88%] md:h-[450px]'
                     style={{
                         backgroundImage: `url(${assets.slotContainer.src})`,
