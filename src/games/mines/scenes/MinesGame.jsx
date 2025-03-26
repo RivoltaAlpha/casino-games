@@ -5,6 +5,7 @@ import cashoutSound from '../../../assets/mines/audio/cashout.mp3';
 import clickSound from '../../../assets/mines/audio/coin.mp3';
 import mineSound from '../../../assets/mines/audio/mine.mp3';
 import startSound from '../../../assets/mines/audio/StartGame.mp3';
+import winSound from '../../../assets/mines/audio/soft_win.mp3';
 
 function MinesGame({ assets }) {
     //history widget
@@ -30,6 +31,12 @@ function MinesGame({ assets }) {
     };
     const playStartSound = () => {
         const audio = new Audio(startSound);
+        audio.play().catch(error => {
+            console.log('Autoplay prevented:', error);
+        });
+    };
+    const playWinSound = () => {
+        const audio = new Audio(winSound);
         audio.play().catch(error => {
             console.log('Autoplay prevented:', error);
         });
@@ -101,6 +108,7 @@ function MinesGame({ assets }) {
             if (response.outcome === 1) {
                 setRevealed(newRevealed);
                 setWin((prev) => prev + response.win);
+                playWinSound();
             } // If a mine is hit, reveal the remaining cells.
             else if (response.outcome === 0) {
                 setWin(0);

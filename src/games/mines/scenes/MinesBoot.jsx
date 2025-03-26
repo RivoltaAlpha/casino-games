@@ -1,12 +1,12 @@
 import React from 'react'
 import Carousel from '../components/Carousel'
-import continueSound from '../../../assets/mines/audio/continue.mp3';
+import StartGame from '../../../assets/mines/audio/StartGame.mp3';
 
 
 function MinesBoot({ assets, onContinue }) {
 
     const playContinueSound = () => {
-      const audio = new Audio(continueSound);
+      const audio = new Audio(StartGame);
       audio.play().catch(error => {
         console.log('Autoplay prevented:', error);
       });

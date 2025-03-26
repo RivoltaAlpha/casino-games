@@ -22,36 +22,36 @@ import { useLocation } from 'react-router-dom'
 
 
 const Mines = () => {
-     useEffect(() => {
-            const audio = new Audio(bootMusic);
-            audio.loop = true;
+    //  useEffect(() => {
+    //         const audio = new Audio(bootMusic);
+    //         audio.loop = true;
         
-            const handlePlayAudio = () => {
-              audio.play().catch(error => {
-                console.log('Autoplay prevented:', error);
-              });
-            };
+    //         const handlePlayAudio = () => {
+    //           audio.play().catch(error => {
+    //             console.log('Autoplay prevented:', error);
+    //           });
+    //         };
         
-            document.addEventListener('click', handlePlayAudio, { once: true });
+    //         document.addEventListener('click', handlePlayAudio, { once: true });
         
-            const handleVisibilityChange = () => {
-              if (document.hidden) {
-                audio.pause();
+    //         const handleVisibilityChange = () => {
+    //           if (document.hidden) {
+    //             audio.pause();
               
-              } else {
-                audio.play();
-              }
-            };
+    //           } else {
+    //             audio.play();
+    //           }
+    //         };
         
-            document.addEventListener('visibilitychange', handleVisibilityChange);
+    //         document.addEventListener('visibilitychange', handleVisibilityChange);
         
-            return () => {
-              audio.pause();
-              audio.currentTime = 0;
-              document.removeEventListener('click', handlePlayAudio);
-              document.removeEventListener("visibilitychange", handleVisibilityChange);
-            };
-          }, []);
+    //         return () => {
+    //           audio.pause();
+    //           audio.currentTime = 0;
+    //           document.removeEventListener('click', handlePlayAudio);
+    //           document.removeEventListener("visibilitychange", handleVisibilityChange);
+    //         };
+    //       }, []);
     
     // Current view state
     const [currentView, setCurrentView] = useState('boot');
