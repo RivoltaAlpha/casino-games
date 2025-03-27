@@ -25,8 +25,8 @@ const Carousel = ({slides,arrowLeft,arrowRight}) => {
                 >
                     {slides.map((slide, index) => (
                         <div key={index} className="relative  min-w-full flex items-center justify-center ">
-                            <img src={slide} alt={`Slide ${index + 1}`} className="object-cover 
-                            w-fu h-full " />
+                            <img src={slide} alt={`Slide ${index + 1}`} className="object-cover w-fu h-full " />
+
                             {/* <img src={gifImages[index]} alt="Anim" 
                             className='gif absolute top-10 left-40 '/> */}
                         </div>
