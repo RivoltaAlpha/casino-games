@@ -3,8 +3,15 @@ import Carousel from '../components/Carousel'
 function ChargeBuffaloBoot({ assets, onContinue }) {
   //console.log('Assets passed', assets)
 
-  const slides = [assets.slider1.src, assets.freeGame.src, assets.slider4.src, assets.slide3.src, ]
+  const slides = []
+  
+  // Only add slides that exist
+  if (assets?.slider1?.src) slides.push(assets.slider1.src)
+  if (assets?.freeGame?.src) slides.push(assets.freeGame.src)
+  if (assets?.slider4?.src) slides.push(assets.slider4.src)
+  if (assets?.slide3?.src) slides.push(assets.slide3.src)
 
+    
   return (
     <div className='w-full h-full flex  relative rounded-lg flex-col gap-3 py-2 px-6 items-center justify-center'
       style={{
