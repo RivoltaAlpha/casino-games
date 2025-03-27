@@ -11,11 +11,10 @@ function ChargeBuffaloBoot({ assets, onContinue }) {
   if (assets?.slider4?.src) slides.push(assets.slider4.src)
   if (assets?.slide3?.src) slides.push(assets.slide3.src)
 
-    
   return (
     <div className='w-full h-full flex  relative rounded-lg flex-col gap-3 py-2 px-6 items-center justify-center'
       style={{
-        backgroundImage: `url(${assets.background.src})`,
+        backgroundImage: assets?.background?.src ? `url(${assets.background.src})` : 'none',
         backgroundSize: '100% 100%',
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'center'

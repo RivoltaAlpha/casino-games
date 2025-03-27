@@ -457,7 +457,7 @@ function calculateOutcome(reels, betAmount, paytable) {
             {/*wide screen ie  laptop */}
             <div className=' flex w-full h-full flex-col items-center justify-center'>
                 <div className='w-full flex justify-center items-center mb-4'>
-                    <div className='w-64 h-64 relative mx-auto'
+                    <div className='w-64 h-36 relative mx-auto'
                         style={{
                             backgroundImage: `url(${buffalo})`,
                             backgroundSize: 'contain',
